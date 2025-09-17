@@ -174,9 +174,10 @@ body {
 .container {
     background: linear-gradient(0deg, #4f105f3f 0%, #8401ff85 100%);
     border-radius: 15px;
-    padding: 5% 5%; ;
+    padding-left: 5%;
+    padding-right: 5%;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
-    display: fixed;
+    display: flex; /* Changed from 'fixed' for better centering */
     justify-content: center;
     align-items: center;
     max-width: 600px;
@@ -184,17 +185,38 @@ body {
     margin-top: 60px;
     margin-bottom: 40px;
     border-top: 1.5px solid #00000088;
-    border-bottom: 3px  #00000088;
+    border-bottom: 3px #00000088;
     text-decoration: none;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 60px auto 40px auto; /* Corrected centering: top/bottom margins, auto left/right */
     z-index: 999;
+    flex-direction: column; /* Add this to stack the content inside the container */
+}
 
-
-
-    
+@media (max-width: 1000px) {
+    .container {
+        background: linear-gradient(0deg, #4f105f3f 0%, #8401ff85 100%);
+        border-radius: 15px;
+        padding-left: 5px;
+        padding-right: 5px;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+        display: flex; /* Changed from 'fixed' for better centering */
+        justify-content: center;
+        align-items: center;
+        max-width: 600px;
+        width: 100%;
+        margin-top: 60px;
+        margin-bottom: 40px;
+        border-top: 1.5px solid #00000088;
+        border-bottom: 3px #00000088;
+        text-decoration: none;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        margin: 60px auto 40px auto; /* Corrected centering: top/bottom margins, auto left/right */
+        z-index: 999;
+        flex-direction: column; /* Add this to stack the content inside the container */
+    }
 }
 
 
@@ -257,46 +279,6 @@ header {
         cursor: pointer;
     }
 
-
-@media (max-width: 1000px) {
-    header {
-        flex-direction: row;
-        height: auto;
-        min-height: unset;
-        gap: 10px;
-        justify-content: center;
-        flex-wrap: wrap;
-        align-items: center;
-    }
-    .buttons3-container {
-        display: flex; /* Змінено з flex-direction: column */
-        flex-direction: column; /* Додано, щоб кнопки розташовувалися вертикально */
-        justify-content: center; /* Центруємо кнопки по горизонталі */
-        align-items: center;
-        gap: 5px;
-        width: 80%;
-        user-select: none;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        border-radius: 15px 15px 15px 15px;
-        -webkit-border-radius: 15px 15px 15px 15px;
-        -moz-border-radius: 15px 15px 15px 15px;
-        padding-top: 30px;
-        padding-bottom: 30px;
-        padding-left: 20px;
-        padding-right: 20px;
-        filter: drop-shadow(0px 0px 30px #9800f0);
-        margin-top: 50px;
-        margin-left: auto;
-        margin-right: auto;
-        background: #BC7EFA;
-        background: linear-gradient(129deg, rgba(188, 126, 250, 1) 0%, rgba(118, 43, 189, 1) 50%, rgba(129, 39, 208, 1) 100%);
-
-} 
-
-
-}
 
 .buttons1-container {
     display: flex;
